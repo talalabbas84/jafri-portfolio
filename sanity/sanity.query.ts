@@ -74,7 +74,11 @@ export async function getEducation() {
       startDate,
       endDate,
       location,
-      description
+      description,
+      url,
+      "logo": logo.asset->url,
+      
+
     }`
   );
 }
