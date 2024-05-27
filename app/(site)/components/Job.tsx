@@ -14,7 +14,7 @@ export default async function Job() {
       </div>
 
       <div className='flex flex-col gap-y-12'>
-        {job.map(data => (
+        {job.reverse().map(data => (
           <div
             key={data._id}
             className='flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[4.5rem] before:left-7 before:w-[1px] before:h-[calc(100%-50px)] before:bg-zinc-800'
