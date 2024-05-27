@@ -1,6 +1,6 @@
 import { getProfile } from '@/sanity/sanity.query';
 import type { ProfileType } from '@/types';
-import Job from './components/global/Job';
+import Job from './components/Job';
 import HeroSvg from './icons/HeroSvg';
 
 export default async function Home() {
