@@ -63,3 +63,18 @@ export async function getSingleProject(slug: string) {
     { slug }
   );
 }
+
+export async function getEducation() {
+  return client.fetch(
+    groq`*[_type == "education"]{
+      _id,
+      institution,
+      degree,
+      fieldOfStudy,
+      startDate,
+      endDate,
+      location,
+      description
+    }`
+  );
+}

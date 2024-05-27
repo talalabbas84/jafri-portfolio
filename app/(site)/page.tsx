@@ -1,5 +1,6 @@
 import { getProfile } from '@/sanity/sanity.query';
 import type { ProfileType } from '@/types';
+import Education from './components/Education';
 import Job from './components/Job';
 import HeroSvg from './icons/HeroSvg';
 
@@ -38,6 +39,7 @@ export default async function Home() {
         <HeroSvg />
       </section>
       <Job />
+      <Education />
     </main>
   );
 }

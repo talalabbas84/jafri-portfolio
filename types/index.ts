@@ -45,3 +45,17 @@ export type ProjectType = {
   projectType: string | null;
   description: PortableTextBlock[];
 };
+
+
+export type EducationType = {
+  _id: string;
+  institution: string;
+  degree: string;
+  fieldOfStudy: string;
+  startDate: Date;
+  endDate: Date;
+  location: string;
+  description: string;
+  logo: string;
+  url: string;
+};
