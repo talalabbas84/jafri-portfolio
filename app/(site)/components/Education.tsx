@@ -6,6 +6,13 @@ import Image from 'next/image';
 
 export default async function Education() {
   const education: EducationType[] = await getEducation();
+    education
+      .sort(
+        (a, b) =>
+          new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
+      )
+      .reverse();
+
 
   return (
     <section className='mt-32'>
@@ -33,7 +40,9 @@ export default async function Education() {
             </a>
             <div className='flex flex-col items-start'>
               <h3 className='text-xl font-bold'>{data.institution}</h3>
+              <p>{data.degree}</p>
               <p>{data.fieldOfStudy}</p>
+              <p>{data.location}</p>
               <small className='text-sm text-zinc-500 mt-2 tracking-widest uppercase'>
                 {data.startDate.toString()} - {data.endDate.toString()}
               </small>
