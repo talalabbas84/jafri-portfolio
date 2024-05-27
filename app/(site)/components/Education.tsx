@@ -8,7 +8,7 @@ export default async function Education() {
   const education: EducationType[] = await getEducation();
     education
       .sort(
-        (a, b) =>
+        (b, a) =>
           new Date(a.startDate).getTime() - new Date(b.startDate).getTime()
       )
       .reverse();
