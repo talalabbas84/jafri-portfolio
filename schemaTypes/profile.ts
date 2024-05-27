@@ -81,16 +81,10 @@ const profile = {
           initialValue: 'https://linkedin.com/in/'
         },
         {
-          name: 'twitter',
-          title: 'Twitter URL',
+          name: 'upwork',
+          title: 'Upwork URL',
           type: 'url',
-          initialValue: 'https://twitter.com/'
-        },
-        {
-          name: 'twitch',
-          title: 'Twitch URL',
-          type: 'url',
-          initialValue: 'https://twitch.com/'
+          initialValue: 'https://upwork.com/'
         }
       ],
       options: {
