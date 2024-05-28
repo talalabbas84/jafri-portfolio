@@ -58,6 +58,20 @@ export default async function Project({ params }: Props) {
           alt={project.coverImage?.alt || project.name}
         />
 
+        {/* Render all images */}
+        <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+          {project.images.map((img, index) => (
+            <Image
+              key={index}
+              className='rounded-xl border border-zinc-800'
+              width={900}
+              height={460}
+              src={img.image || fallBackImage}
+              alt={img.alt || `Project image ${index + 1}`}
+            />
+          ))}
+        </div>
+
         <div className='flex flex-col gap-y-6 mt-8 leading-7 text-zinc-400'>
           <PortableText value={project.description} />
         </div>

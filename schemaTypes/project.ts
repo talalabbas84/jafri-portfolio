@@ -54,6 +54,14 @@ const project = {
       ]
     },
     {
+      name: 'images',
+      title: 'Project Images',
+      type: 'array',
+      of: [{ type: 'image' }],
+      options: { hotspot: true },
+      description: 'Upload multiple images for this project'
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'array',

@@ -42,10 +42,10 @@ export type ProjectType = {
     alt: string | null;
     image: string;
   };
+  images: { alt: string | null; image: string }[];
   projectType: string | null;
   description: PortableTextBlock[];
 };
-
 
 export type EducationType = {
   _id: string;
