@@ -60,7 +60,7 @@ export default async function Project({ params }: Props) {
 
         {/* Render all images */}
         <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-          {project.images.map((img, index) => (
+          {project.images && project.images.map((img, index) => (
             <Image
               key={index}
               className='rounded-xl border border-zinc-800'
