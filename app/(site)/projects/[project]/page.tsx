@@ -97,7 +97,7 @@ export default async function Project({ params }: Props) {
         <div className='flex flex-col gap-y-6 mt-8 leading-7 text-zinc-400'>
           <PortableText value={project.description} />
         </div>
-        <ul className='flex flex-wrap items-center gap-3 mt-8'>
+      <ul className='flex flex-wrap items-center gap-3 mt-8'>
           {project.technologies &&
             project.technologies.map((skill, id) => (
               <li
