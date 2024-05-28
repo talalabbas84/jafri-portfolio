@@ -64,8 +64,10 @@ export async function getSingleProject(slug: string) {
       name,
       projectUrl,
       coverImage { alt, "image": asset->url },
+      images[] { alt, "image": asset->url },
       tagline,
-      description
+      description,
+      projectType
     }`,
     { slug }
   );
