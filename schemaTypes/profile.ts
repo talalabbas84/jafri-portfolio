@@ -85,6 +85,12 @@ const profile = {
           title: 'Upwork URL',
           type: 'url',
           initialValue: 'https://upwork.com/'
+        },
+        {
+          name: 'leetcode',
+          title: 'LeetCode URL',
+          type: 'url',
+          initialValue: 'https://leetcode.com/'
         }
       ],
       options: {
