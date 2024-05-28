@@ -41,11 +41,18 @@ export async function getJob() {
 export async function getProjects() {
   return client.fetch(
     groq`*[_type == "project"]{
-      _id, 
+        _id, 
       name,
       "slug": slug.current,
       tagline,
       "logo": logo.asset->url,
+      "coverImage": coverImage.asset->url,
+      "coverImageAlt": coverImage.alt,
+      "images": images[].asset->url,
+      projectUrl,
+      description,
+      projectType
+      
     }`
   );
 }

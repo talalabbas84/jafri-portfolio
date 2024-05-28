@@ -5,6 +5,8 @@ import type { ProjectType } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
+
 export default async function Project() {
   const projects: ProjectType[] = await getProjects();
 
