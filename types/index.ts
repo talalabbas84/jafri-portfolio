@@ -31,12 +31,14 @@ export type JobType = {
 
 
 
+
 export type ProjectType = {
   _id: string;
   name: string;
   slug: string;
   tagline: string;
   projectUrl: string;
+  githubUrl: string;
   logo: string;
   coverImage: {
     alt: string | null;
@@ -45,6 +47,7 @@ export type ProjectType = {
   images: { alt: string | null; image: string }[];
   projectType: string | null;
   description: PortableTextBlock[];
+  technologies: string[];
 };
 
 export type EducationType = {

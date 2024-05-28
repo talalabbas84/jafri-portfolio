@@ -41,7 +41,7 @@ export async function getJob() {
 export async function getProjects() {
   return client.fetch(
     groq`*[_type == "project"]{
-        _id, 
+      _id,
       name,
       "slug": slug.current,
       tagline,
@@ -50,9 +50,10 @@ export async function getProjects() {
       "coverImageAlt": coverImage.alt,
       "images": images[].asset->url,
       projectUrl,
+      githubUrl,
       description,
-      projectType
-      
+      projectType,
+      technologies
     }`
   );
 }
@@ -63,15 +64,18 @@ export async function getSingleProject(slug: string) {
       _id,
       name,
       projectUrl,
+      githubUrl,
       coverImage { alt, "image": asset->url },
       images[] { alt, "image": asset->url },
       tagline,
       description,
-      projectType
+      projectType,
+      technologies
     }`,
     { slug }
   );
 }
+
 
 export async function getEducation() {
   return client.fetch(

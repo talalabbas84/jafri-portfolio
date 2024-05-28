@@ -9,6 +9,7 @@ import Link from 'next/link';
 
 export default async function Project() {
   const projects: ProjectType[] = await getProjects();
+  console.log(projects);
 
   return (
     <main className='max-w-7xl mx-auto md:px-16 px-6'>
@@ -32,13 +33,18 @@ export default async function Project() {
             key={project?._id}
             className='flex items-center gap-x-4 bg-[#1d1d20] border border-transparent hover:border-zinc-700 p-4 rounded-lg ease-in-out'
           >
-            <Image
-              src={project && project.logo}
-              width={60}
-              height={60}
-              alt={project?.name}
-              className='bg-zinc-800 rounded-md p-2'
-            />
+            {
+              project && project.logo && (
+                <Image
+                  src={project.logo}
+                  width={60}
+                  height={60}
+                  alt={project?.name}
+                  className='bg-zinc-800 rounded-md p-2'
+                />
+              )
+            }
+          
             <div>
               <h2 className='font-semibold mb-1'>{project?.name}</h2>
               <div className='text-sm text-zinc-400'>{project?.tagline}</div>

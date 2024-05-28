@@ -40,6 +40,11 @@ const project = {
       type: 'url'
     },
     {
+      name: 'githubUrl',
+      title: 'GitHub URL',
+      type: 'url'
+    },
+    {
       name: 'coverImage',
       title: 'Cover Image',
       type: 'image',
@@ -80,6 +85,13 @@ const project = {
         ],
         layout: 'radio'
       }
+    },
+    {
+      name: 'technologies',
+      title: 'Technologies',
+      type: 'array',
+      description: 'Add a list of technologies used in this project',
+      of: [{ type: 'string' }]
     }
   ]
 };
